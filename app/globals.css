@@ -1,26 +1,205 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	--background: oklch(12% 0.02 45);
+	--foreground: oklch(95% 0.02 50);
+	--secondary: oklch(18% 0.03 45);
+	--secondary-foreground: oklch(95% 0.02 50);
+	--card: oklch(16% 0.025 45);
+	--card-foreground: oklch(95% 0.02 50);
+	--muted: oklch(85% 0.03 50);
+	--muted-foreground: oklch(68% 0.03 50);
+	--accent: oklch(65% 0.18 60);
+	--accent-foreground: oklch(99% 0.01 85);
+	--border: oklch(29% 0.035 48);
+	--ring: oklch(75% 0.15 65);
+	--about-start: oklch(20% 0.045 45);
+	--about-end: oklch(31% 0.045 55);
+	--sage: oklch(70% 0.09 145);
+	--shadow: oklch(5% 0.01 45);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-border: var(--border);
+	--color-ring: var(--ring);
+	--color-sage: var(--sage);
+	--font-sans: var(--font-inter);
+	--font-mono: var(--font-jetbrains-mono);
+	--font-brand: var(--font-courgette);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+	background: var(--background);
+	scroll-behavior: smooth;
+	scroll-padding-top: 88px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	color: var(--foreground);
+	background:
+		linear-gradient(
+			180deg,
+			color-mix(in oklch, var(--secondary), transparent 60%),
+			transparent 440px
+		),
+		var(--background);
+	font-family:
+		var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
+		Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+::selection {
+	background: var(--accent);
+	color: var(--accent-foreground);
+}
+
+[data-locale="pt"] {
+	display: none;
+}
+
+:root[data-lang="pt"] [data-locale="en"] {
+	display: none;
+}
+
+:root[data-lang="pt"] [data-locale="pt"] {
+	display: revert;
+}
+
+.hero-visual {
+	background:
+		linear-gradient(
+			135deg,
+			color-mix(in oklch, var(--secondary), white 5%),
+			var(--card)
+		),
+		repeating-linear-gradient(
+			90deg,
+			transparent 0,
+			transparent 31px,
+			color-mix(in oklch, var(--border), transparent 55%) 32px
+		);
+	border: 1px solid var(--border);
+	box-shadow: 0 24px 80px color-mix(in oklch, var(--shadow), transparent 20%);
+}
+
+.hero-visual::after {
+	background:
+		linear-gradient(
+			90deg,
+			transparent,
+			color-mix(in oklch, var(--accent), transparent 65%),
+			transparent
+		),
+		linear-gradient(
+			180deg,
+			transparent,
+			color-mix(in oklch, var(--sage), transparent 75%)
+		);
+	content: "";
+	inset: 0;
+	opacity: 0.55;
+	pointer-events: none;
+	position: absolute;
+}
+
+.about-band {
+	background: linear-gradient(135deg, var(--about-start), var(--about-end));
+	border-block: 1px solid var(--border);
+}
+
+.portrait-frame {
+	background:
+		linear-gradient(
+			145deg,
+			color-mix(in oklch, var(--accent), transparent 76%),
+			transparent 48%
+		),
+		linear-gradient(
+			180deg,
+			color-mix(in oklch, var(--secondary), white 6%),
+			var(--card)
+		);
+	border: 1px solid color-mix(in oklch, var(--accent), var(--border) 72%);
+	box-shadow: 0 22px 70px color-mix(in oklch, var(--shadow), transparent 25%);
+}
+
+.portrait-grid {
+	background-image:
+		linear-gradient(
+			color-mix(in oklch, var(--border), transparent 35%) 1px,
+			transparent 1px
+		),
+		linear-gradient(
+			90deg,
+			color-mix(in oklch, var(--border), transparent 35%) 1px,
+			transparent 1px
+		);
+	background-size: 32px 32px;
+}
+
+.project-rail {
+	scrollbar-color: var(--accent) transparent;
+	scrollbar-width: thin;
+}
+
+.project-rail::-webkit-scrollbar {
+	height: 8px;
+}
+
+.project-rail::-webkit-scrollbar-thumb {
+	background: var(--accent);
+	border-radius: 999px;
+}
+
+.project-shot {
+	background:
+		linear-gradient(
+			135deg,
+			color-mix(in oklch, var(--secondary), white 4%),
+			var(--card)
+		),
+		linear-gradient(
+			90deg,
+			color-mix(in oklch, var(--accent), transparent 78%),
+			transparent
+		);
+	border: 1px solid color-mix(in oklch, var(--border), white 6%);
+}
+
+.project-shot[data-accent="sage"] {
+	background:
+		linear-gradient(
+			135deg,
+			color-mix(in oklch, var(--sage), transparent 78%),
+			var(--card)
+		),
+		linear-gradient(
+			90deg,
+			color-mix(in oklch, var(--secondary), white 5%),
+			transparent
+		);
+}
+
+.project-shot[data-accent="cream"] {
+	background:
+		linear-gradient(
+			135deg,
+			color-mix(in oklch, var(--muted), transparent 82%),
+			var(--card)
+		),
+		linear-gradient(
+			90deg,
+			color-mix(in oklch, var(--accent), transparent 84%),
+			transparent
+		);
 }
