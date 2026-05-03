@@ -46,8 +46,8 @@ export const navItems = [
 export const hero = {
 	name: "Kevin Solar",
 	role: {
-		en: "Frontend & Full Stack Developer",
-		pt: "Desenvolvedor Frontend & Full Stack",
+		en: "Full Stack Developer",
+		pt: "Desenvolvedor Full Stack",
 	},
 	headline: {
 		en: "Hi, I'm a Developer focused on building amazing experiences.",
@@ -135,8 +135,8 @@ export const projects = {
 		pt: "Projetos em destaque",
 	},
 	intro: {
-		en: "A few slots for real projects, screenshots, stack details, and links before publishing.",
-		pt: "Alguns espaços para projetos reais, screenshots, stack e links antes de publicar.",
+		en: "A few projects I think are worth showing here, from custom WordPress builds to modern Next.js interfaces.",
+		pt: "Alguns projetos que acho interessante mostrar por aqui, de builds customizados em WordPress a interfaces modernas com Next.js.",
 	},
 	items: [
 		{

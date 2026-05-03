@@ -22,7 +22,7 @@ export function ProjectsSection() {
 					</p>
 				</div>
 
-				<div className="project-rail -mx-5 mt-10 flex snap-x gap-4 overflow-x-auto px-5 pb-5 md:mx-0 md:grid md:grid-cols-3 md:overflow-visible md:px-0">
+				<div className="project-rail mt-10 flex snap-x gap-4 overflow-x-auto pb-5 md:grid md:grid-cols-3 md:overflow-visible md:pb-0">
 					{projects.items.map((project) => (
 						<article
 							className="flex min-w-[82%] snap-start flex-col rounded-lg border border-border bg-secondary p-4 md:min-w-0"

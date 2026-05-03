@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kevin Solar Portfolio
+
+Personal portfolio built with Next.js, focused on presenting my work, stack, and contact channels through a clean Coffee & Code visual identity.
+
+![Portfolio preview](preview.png)
+
+## About
+
+This project is a bilingual landing page for my developer portfolio. It highlights selected projects, technologies I work with, a short personal intro, and direct contact links.
+
+The interface follows a dark coffee-inspired design system with warm accents, monospace body copy, and a compact layout made for scanning quickly on desktop and mobile.
+
+## Features
+
+- Bilingual content with English as the default language
+- EN/PT language toggle persisted with `localStorage`
+- Static, optimized landing page using the App Router
+- Reusable button component for internal and external links
+- Isolated client-side logic only where needed
+- Project cards with optimized images via `next/image`
+- Horizontal project rail on mobile
+- Responsive layout for mobile, desktop, and wide screens
+- SEO metadata and Open Graph basics
+
+## Tech Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- `next/font`
+- `next/image`
+
+## Project Structure
+
+```txt
+app/
+  components/       Reusable UI pieces
+  components/icons/ SVG icons as React components
+  data/             Portfolio content and typed data
+  sections/         Page sections
+  globals.css       Theme tokens and global styles
+  layout.tsx        Fonts and metadata
+  page.tsx          Landing page composition
+public/             Project screenshots and static files
+```
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run the development server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open:
 
-## Learn More
+```txt
+http://localhost:3000
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Available Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm dev
+pnpm build
+pnpm start
+pnpm lint
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Content
 
-## Deploy on Vercel
+Most editable portfolio content lives in:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```txt
+app/data/portfolio.ts
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Project screenshots live in:
+
+```txt
+public/
+```
+
+To add a new project, add a new item to `projects.items` and reference an image from `public`, for example:
+
+```ts
+image: {
+  src: "/print-project.png",
+  alt: "Project screenshot",
+}
+```
+
+## Notes
+
+This portfolio is intentionally simple: no CMS, no heavy carousel library, and no unnecessary client-side state. The goal is to keep it fast, maintainable, and easy to update.
+
+## Author
+
+Kevin Solar
+
+- [LinkedIn](https://linkedin.com/in/kevinsolar)
+- [GitHub](https://github.com/kevinsolar)
