@@ -6,7 +6,7 @@ import { projects } from "@/app/data/portfolio"
 
 export function ProjectsSection() {
 	return (
-		<section className="px-5 py-16 md:px-8 md:py-24" id="projects">
+		<section className="overflow-hidden px-5 py-16 md:px-8 md:py-24" id="projects">
 			<div className="mx-auto max-w-7xl">
 				<div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
 					<div className="max-w-3xl">
@@ -22,10 +22,10 @@ export function ProjectsSection() {
 					</p>
 				</div>
 
-				<div className="project-rail mt-10 flex snap-x gap-4 overflow-x-auto pb-5 md:grid md:grid-cols-3 md:overflow-visible md:pb-0">
+				<div className="project-rail mt-10 flex w-full max-w-full snap-x gap-4 overflow-x-auto pb-5 md:grid md:grid-cols-3 md:overflow-visible md:pb-0">
 					{projects.items.map((project) => (
 						<article
-							className="flex min-w-[82%] snap-start flex-col rounded-lg border border-border bg-secondary p-4 md:min-w-0"
+							className="flex w-[82%] shrink-0 snap-start flex-col rounded-lg border border-border bg-secondary p-4 md:w-auto md:min-w-0"
 							key={project.title}
 						>
 							<ProjectThumb
@@ -38,7 +38,7 @@ export function ProjectsSection() {
 								<h3 className="font-sans text-xl font-bold text-foreground">
 									{project.title}
 								</h3>
-								<p className="mt-3 text-sm leading-7 text-muted">
+								<p className="mt-3 break-words text-sm leading-7 text-muted">
 									<LocalizedText value={project.description} />
 								</p>
 

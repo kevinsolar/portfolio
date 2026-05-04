@@ -1,6 +1,7 @@
 import { Button } from "@/app/components/button"
 import { LanguageToggle } from "@/app/components/language-toggle"
 import { LocalizedText } from "@/app/components/localized-text"
+import { MobileNav } from "@/app/components/mobile-nav"
 import { hero, navItems } from "@/app/data/portfolio"
 import Link from "next/link"
 
@@ -8,7 +9,7 @@ export function SiteNav() {
 	return (
 		<header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
 			<nav className="mx-auto flex min-h-16 max-w-7xl items-center justify-between gap-4 px-5 py-3 md:px-8">
-				<Link className="font-brand text-3xl text-foreground" href="/">
+				<Link className="font-brand text-lg text-foreground md:text-2xl" href="/">
 					{hero.name}
 				</Link>
 
@@ -35,6 +36,7 @@ export function SiteNav() {
 						<LocalizedText value={hero.secondaryCta} />
 					</Button>
 					<LanguageToggle />
+					<MobileNav cvLabel={hero.secondaryCta} items={navItems} />
 				</div>
 			</nav>
 		</header>

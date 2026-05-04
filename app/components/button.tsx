@@ -28,8 +28,13 @@ type ButtonNativeProps = ButtonCommonProps &
 
 type ButtonProps = ButtonAnchorProps | ButtonNativeProps;
 
+const baseDisplayClass = "inline-flex";
+
 const baseClasses =
-  "inline-flex items-center justify-center rounded-lg font-bold transition-all focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background disabled:pointer-events-none disabled:opacity-60";
+  "items-center justify-center rounded-lg font-bold transition-all focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background disabled:pointer-events-none disabled:opacity-60";
+
+const displayOverridePattern =
+  /(^|\s)(hidden|block|inline-block|inline|flex|inline-flex|grid|inline-grid)(\s|$)/;
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
@@ -72,6 +77,7 @@ export function Button(props: ButtonProps) {
   } = props;
 
   const classes = cx(
+    !displayOverridePattern.test(className ?? "") && baseDisplayClass,
     baseClasses,
     variantClasses[variant],
     sizeClasses[size],

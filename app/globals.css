@@ -148,8 +148,20 @@ body {
 }
 
 .project-rail {
+	contain: paint;
+	overscroll-behavior-x: contain;
 	scrollbar-color: var(--accent) transparent;
 	scrollbar-width: thin;
+}
+
+.mobile-nav {
+	display: block;
+}
+
+@media (min-width: 48rem) {
+	.mobile-nav {
+		display: none;
+	}
 }
 
 .project-rail::-webkit-scrollbar {
