@@ -195,7 +195,7 @@ export const projects = {
 				pt: "Esse projeto é uma modernização de um site antigo. Ainda está em processo de aprovação, mas já evidencia ganhos de performance, modernização tanto no layout quanto na stack, além de melhorias na experiência do usuário.\nsite antigo: https://patella.com.br/ (nao foi feito por mim)",
 			},
 			stack: ["Next.js", "TS", "Tailwind"],
-			projectUrl: "https://ecovillebrasil.com.br/",
+			projectUrl: "https://github.com/kevinsolar/patella",
 			github: "https://github.com/kevinsolar/patella",
 			accent: "accent",
 		},
