@@ -26,7 +26,7 @@ export function SiteNav() {
 				</div>
 
 				<div className="flex items-center gap-3">
-					<Button
+					{/* <Button
 						className="hidden md:inline-flex"
 						download
 						href="/kevin-solar-cv.pdf"
@@ -34,7 +34,7 @@ export function SiteNav() {
 						variant="ghost"
 					>
 						<LocalizedText value={hero.secondaryCta} />
-					</Button>
+					</Button> */}
 					<LanguageToggle />
 					<MobileNav cvLabel={hero.secondaryCta} items={navItems} />
 				</div>
