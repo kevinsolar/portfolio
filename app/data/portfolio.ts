@@ -214,6 +214,36 @@ export const projects = {
 			github: "",
 			accent: "accent",
 		},
+		{
+			image: {
+				src: "/print-haras.png",
+				alt: "Haras Marcon screenshot",
+			},
+			title: "Haras Marcon",
+			description: {
+				en: "A custom WordPress website for Haras Marcon and Espaço de Eventos Marcon, presenting a countryside venue that brings together nature, horses, events, lodging and a complete haras experience. The site highlights services, gallery, location and contact in a warm, visual flow.",
+				pt: "Site em WordPress customizado para o Haras Marcon e Espaço de Eventos Marcon, apresentando um espaço no campo que une natureza, cavalos, eventos, hospedagem e a experiência completa de um haras. O site destaca serviços, galeria, localização e contato em uma navegação visual e acolhedora.",
+			},
+			stack: ["WordPress", "ACF", "PHP", "CSS"],
+			projectUrl: "https://harasmarcon.com.br/",
+			github: "",
+			accent: "accent",
+		},
+		{
+			image: {
+				src: "/print-thinkcanada.png",
+				alt: "Think Canada project screenshot",
+			},
+			title: "Think Canada",
+			description: {
+				en: "A custom WordPress website for Think Canada, an education project that connects Brazilian students and schools with public Canadian institutions. The site presents the initiative, academic guidance, admissions support, partner institutions and a lead capture flow for people interested in studying in Canada.",
+				pt: "Site em WordPress customizado para o Think Canada, um projeto educacional que conecta estudantes e escolas brasileiras a instituições públicas do Canadá. O site apresenta a iniciativa, orientação acadêmica, suporte no processo de admissão, instituições parceiras e um fluxo de captação para quem quer estudar no Canadá.",
+			},
+			stack: ["WordPress", "ACF", "PHP", "CSS"],
+			projectUrl: "https://thinkcanada.com.br/",
+			github: "",
+			accent: "accent",
+		},
 	] as ProjectItem[],
 	learnMore: {
 		en: "See more",
