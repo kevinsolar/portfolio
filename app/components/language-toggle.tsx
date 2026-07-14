@@ -5,18 +5,45 @@ import type { Locale } from "@/app/data/portfolio";
 
 const STORAGE_KEY = "kevin-solar-portfolio-language";
 
-function applyLocale(locale: Locale) {
+function getSavedLocale(): Locale | null {
+  const savedLocale = window.localStorage.getItem(STORAGE_KEY);
+
+  if (savedLocale === "pt" || savedLocale === "en") {
+    return savedLocale;
+  }
+
+  return null;
+}
+
+function getBrowserLocale(): Locale {
+  const browserLanguages =
+    navigator.languages.length > 0 ? navigator.languages : [navigator.language];
+
+  return browserLanguages.some((language) =>
+    language.toLowerCase().startsWith("pt"),
+  )
+    ? "pt"
+    : "en";
+}
+
+function getPreferredLocale(): Locale {
+  return getSavedLocale() ?? getBrowserLocale();
+}
+
+function applyLocale(locale: Locale, shouldPersist = false) {
   document.documentElement.dataset.lang = locale;
   document.documentElement.lang = locale === "pt" ? "pt-BR" : "en";
-  window.localStorage.setItem(STORAGE_KEY, locale);
+
+  if (shouldPersist) {
+    window.localStorage.setItem(STORAGE_KEY, locale);
+  }
 }
 
 export function LanguageToggle() {
   const [locale, setLocale] = useState<Locale>("en");
 
   useEffect(() => {
-    const savedLocale = window.localStorage.getItem(STORAGE_KEY);
-    const nextLocale: Locale = savedLocale === "pt" ? "pt" : "en";
+    const nextLocale = getPreferredLocale();
 
     applyLocale(nextLocale);
     const timeoutId = window.setTimeout(() => setLocale(nextLocale), 0);
@@ -25,7 +52,7 @@ export function LanguageToggle() {
   }, []);
 
   function handleLocaleChange(nextLocale: Locale) {
-    applyLocale(nextLocale);
+    applyLocale(nextLocale, true);
     setLocale(nextLocale);
   }
 

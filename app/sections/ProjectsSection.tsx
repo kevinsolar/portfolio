@@ -1,6 +1,7 @@
 import { Button } from "@/app/components/button"
 import { GithubIcon } from "@/app/components/icons/github-icon"
 import { LocalizedText } from "@/app/components/localized-text"
+import { ProjectDescription } from "@/app/components/project-description"
 import { ProjectThumb } from "@/app/components/project-thumb"
 import { projects } from "@/app/data/portfolio"
 
@@ -38,9 +39,7 @@ export function ProjectsSection() {
 								<h3 className="font-sans text-xl font-bold text-foreground">
 									{project.title}
 								</h3>
-								<p className="mt-3 break-words text-sm leading-7 text-muted">
-									<LocalizedText value={project.description} />
-								</p>
+								<ProjectDescription value={project.description} />
 
 								<div className="mt-5 flex flex-wrap gap-2">
 									{project.stack.map((item) => (
