@@ -245,6 +245,10 @@ export const projects = {
 			accent: "accent",
 		},
 		{
+			image: {
+				src: "/print-oburgues.png",
+				alt: "O Burgues - Mogi das Cruzes project screenshot",
+			},
 			title: "O Burgues - Mogi das Cruzes",
 			description: {
 				en: "Conversion-focused landing page for O Burgues Mogi das Cruzes, built in WordPress with Bootstrap, JavaScript and ACF. The page was designed around direct CTAs to WhatsApp, making it easy for visitors to start an order or contact the restaurant quickly.",
