@@ -141,6 +141,51 @@ export const projects = {
 	items: [
 		{
 			image: {
+				src: "/print-denty.png",
+				alt: "Denty project screenshot",
+			},
+			title: "Denty",
+			description: {
+				en: "Landing page for a dental clinic focused on clear, human communication. The experience presents treatments, trust signals and a simple path to schedule an evaluation.",
+				pt: "Landing page para uma clínica odontológica com foco em comunicação clara e humana. A experiência apresenta tratamentos, sinais de confiança e um caminho simples para agendar uma avaliação.",
+			},
+			stack: ["HTML", "CSS", "JavaScript"],
+			projectUrl: "https://kevinsolar.github.io/lp-dentista/",
+			github: "",
+			accent: "accent",
+		},
+		{
+			image: {
+				src: "/print-it-pratico.webp",
+				alt: "Instrutor Prático project screenshot",
+			},
+			title: "Instrutor Prático",
+			description: {
+				en: "Landing page for a platform that connects students with driving instructors. The interface explains the booking journey clearly and guides visitors toward creating an account.",
+				pt: "Landing page para uma plataforma que conecta alunos a instrutores de direção. A interface explica a jornada de agendamento com clareza e conduz o visitante até a criação da conta.",
+			},
+			stack: ["HTML", "CSS", "JavaScript"],
+			projectUrl: "https://lp.it-pratico.com.br/",
+			github: "",
+			accent: "sage",
+		},
+		{
+			image: {
+				src: "/print-tn-advogados.png",
+				alt: "TN Advogados project screenshot",
+			},
+			title: "TN Advogados",
+			description: {
+				en: "Institutional website for a law firm, built around trust, clarity and strategic guidance. The page presents the firm's services, team and a direct path to an initial contact.",
+				pt: "Site institucional para um escritório de advocacia, construído em torno de confiança, clareza e orientação estratégica. A página apresenta os serviços, a equipe e um caminho direto para o primeiro contato.",
+			},
+			stack: ["HTML", "CSS", "JavaScript"],
+			projectUrl: "https://kevinsolar.github.io/firmly-advocacia/",
+			github: "",
+			accent: "cream",
+		},
+		{
+			image: {
 				src: "/print-lgmais.png",
 				alt: "LG Mais project screenshot",
 			},
