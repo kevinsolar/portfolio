@@ -156,7 +156,7 @@ export const projects = {
 		},
 		{
 			image: {
-				src: "/print-it-pratico.webp",
+				src: "/print-it-pratico.png",
 				alt: "Instrutor Prático project screenshot",
 			},
 			title: "Instrutor Prático",
