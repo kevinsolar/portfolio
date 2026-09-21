@@ -35,9 +35,6 @@ export function HeroSection() {
                 -&gt;
               </span>
             </Button>
-            {/* <Button download href="/kevin-solar-cv.pdf" variant="secondary">
-              <LocalizedText value={hero.secondaryCta} />
-            </Button> */}
           </div>
         </div>
 

@@ -61,10 +61,6 @@ export const hero = {
 		en: "See Projects",
 		pt: "Ver Projetos",
 	},
-	secondaryCta: {
-		en: "Download CV",
-		pt: "Baixar CV",
-	},
 }
 
 export const about = {

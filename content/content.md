@@ -27,7 +27,7 @@ building amazing experiences.
 Turning ideas into solid code and intuitive interfaces.
 From frontend to backend — I like to get my hands dirty.
 
-[Ver Projetos → See Projects]   [Download CV]
+[Ver Projetos → See Projects]
 ```
 
 ### PT
@@ -40,12 +40,11 @@ construir experiências incríveis.
 Transformando ideias em código sólido e interfaces intuitivas.
 Do frontend ao backend — gosto de colocar a mão na massa.
 
-[Ver Projetos]   [Baixar CV]
+[Ver Projetos]
 ```
 
 ### 📌 Notas de implementação
 - Botão primário `See Projects` → âncora `#projects`
-- Botão secundário `Download CV` → link direto para o PDF do currículo
 - O toggle de idioma (EN | PT) deve ficar no **navbar**, persistindo em toda a página
 - Tag ao lado do nome pode ser estilizada em cor de destaque (laranja, conforme layout)
 
@@ -243,19 +242,12 @@ Se tiver uma ideia, um desafio, ou só quiser bater um papo sobre tecnologia —
 
 ---
 
-## 📄 CURRÍCULO PDF
-
-- Botão `Download CV` / `Baixar CV` no **Hero** e opcionalmente no **Navbar**
-- Hospedar o PDF na pasta `/public` do projeto Next.js: `/public/kevin-solar-cv.pdf`
-- Atributo: `<a href="/kevin-solar-cv.pdf" download>`
-
 ---
 
 ## ✅ CHECKLIST PRÉ-PUBLICAÇÃO
 
 - [ ] Substituir foto de exemplo pela foto real
 - [ ] Adicionar projetos reais com screenshots, descrições e links
-- [ ] Hospedar o PDF do currículo em `/public`
 - [ ] Configurar i18n (next-intl ou similar)
 - [ ] Revisar todos os links (LinkedIn, GitHub, Email)
 - [ ] Testar responsividade mobile

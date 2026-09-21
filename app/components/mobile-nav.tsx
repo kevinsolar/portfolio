@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useId, useState } from "react"
-import { Button } from "@/app/components/button"
 import { LocalizedText } from "@/app/components/localized-text"
 import type { LocalizedCopy } from "@/app/data/portfolio"
 
@@ -11,7 +10,6 @@ type MobileNavItem = {
 }
 
 type MobileNavProps = {
-	cvLabel: LocalizedCopy
 	items: MobileNavItem[]
 }
 
@@ -19,7 +17,7 @@ function cx(...classes: Array<string | false | undefined>) {
 	return classes.filter(Boolean).join(" ")
 }
 
-export function MobileNav({ cvLabel, items }: MobileNavProps) {
+export function MobileNav({ items }: MobileNavProps) {
 	const [isOpen, setIsOpen] = useState(false)
 	const menuId = useId()
 
@@ -88,18 +86,6 @@ export function MobileNav({ cvLabel, items }: MobileNavProps) {
 							</a>
 						))}
 					</div>
-
-					<Button
-						className="mt-3"
-						download
-						fullWidth
-						href="/kevin-solar-cv.pdf"
-						onClick={() => setIsOpen(false)}
-						size="sm"
-						variant="secondary"
-					>
-						<LocalizedText value={cvLabel} />
-					</Button>
 				</div>
 			)}
 		</div>
