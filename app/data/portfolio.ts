@@ -197,6 +197,21 @@ export const projects = {
 		},
 		{
 			image: {
+				src: "/print-pedro-candelaria.png",
+				alt: "Pedro Candelaria portfolio website screenshot",
+			},
+			title: "Pedro Candelaria",
+			description: {
+				en: "Portfolio website for Pedro Candelaria, a creative and art director. Built in WordPress as a visual showcase for major commercial projects, following the client's aesthetic while keeping navigation clear for visitors and content updates simple and fast for the client team.",
+				pt: "Portfólio para Pedro Candelaria, Diretor de Criação e Arte. Desenvolvido em WordPress como uma vitrine visual dos grandes trabalhos e comerciais de marcas com os quais participou, seguindo a estética do cliente e mantendo a navegação clara para os visitantes e a atualização de conteúdos simples e rápida para a equipe.",
+			},
+			stack: ["WordPress", "CMS", "CSS", "UX"],
+			projectUrl: "https://pedrocandelaria.com.br/",
+			github: "",
+			accent: "cream",
+		},
+		{
+			image: {
 				src: "/print-saultcollege.png",
 				alt: "Sault College project screenshot",
 			},

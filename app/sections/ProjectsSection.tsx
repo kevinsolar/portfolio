@@ -53,10 +53,12 @@ export function ProjectsSection() {
 								</div>
 
 								<div className="mt-6 flex flex-wrap gap-3">
-									<Button href={project.projectUrl} size="sm" target="_blank">
-										<LocalizedText value={projects.learnMore} />
-										<span className="sr-only">: {project.title}</span>
-									</Button>
+									{project.projectUrl && (
+										<Button href={project.projectUrl} size="sm" target="_blank">
+											<LocalizedText value={projects.learnMore} />
+											<span className="sr-only">: {project.title}</span>
+										</Button>
+									)}
 									{project.github && (
 										<Button
 											href={project.github}
